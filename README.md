@@ -1,2 +1,7 @@
 # AI-Based-Financial-Mobile-Application
-To develop an AI-based smart financial management application that empowers users to make informed financial decisions by providing real-time insights, personalized recommendations, and automated financial planning.
+The AI Financial Management System is a project designed to simplify and
+enhance personal financial management. Using artificial intelligence, it helps
+users with financial planning, investment management, debt management, and
+savings management. By providing predictive analytics, and personalized
+recommendations, this system empowers users to make smarter financial
+decisions and achieve their financial goals effectively.
