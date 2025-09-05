@@ -1,4 +1,4 @@
-# frontend
+# fin_manager
 
 A new Flutter project.
 
