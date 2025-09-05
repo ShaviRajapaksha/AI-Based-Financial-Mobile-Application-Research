@@ -1,6 +1,6 @@
 {
-    "name": "frontend",
-    "short_name": "frontend",
+    "name": "fin_manager",
+    "short_name": "fin_manager",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
