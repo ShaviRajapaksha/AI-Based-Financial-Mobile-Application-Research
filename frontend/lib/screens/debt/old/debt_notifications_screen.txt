@@ -1,0 +1,106 @@
+import 'package:flutter/material.dart';
+import '../../services/notification_service.dart';
+import '../../services/api_service.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+class DebtNotificationsScreen extends StatefulWidget {
+  const DebtNotificationsScreen({super.key});
+  @override
+  State<DebtNotificationsScreen> createState() => _DebtNotificationsScreenState();
+}
+
+class _DebtNotificationsScreenState extends State<DebtNotificationsScreen> {
+  final NotificationService _ns = NotificationService.instance;
+  final ApiService _api = ApiService();
+  List<PendingNotificationRequest> _pending = [];
+  List<Map<String, dynamic>> _backendAlerts = [];
+  bool _loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    setState(() => _loading = true);
+    await _ns.initialize();
+    _pending = await _ns.pending();
+    try {
+      final res = await _api.get('/api/debt/alerts?show=upcoming');
+      _backendAlerts = (res['items'] as List<dynamic>).cast<Map<String, dynamic>>();
+    } catch (e) {
+      _backendAlerts = [];
+    }
+    setState(() => _loading = false);
+  }
+
+  Future<void> _cancelPending(int id) async {
+    await _ns.cancel(id);
+    await _load();
+  }
+
+  Future<void> _ackBackendAlert(int id) async {
+    await _api.post('/api/debt/alerts/$id/ack');
+    await _ns.cancel(id);
+    await _load();
+  }
+
+  Widget _buildPendingList() {
+    if (_pending.isEmpty) return const Text('No scheduled local notifications');
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: _pending.length,
+      itemBuilder: (_, i) {
+        final p = _pending[i];
+        return ListTile(
+          title: Text('ID ${p.id}: ${p.title}'),
+          subtitle: Text('Payload: ${p.payload ?? ""}'),
+          trailing: IconButton(icon: const Icon(Icons.cancel), onPressed: () => _cancelPending(p.id)),
+        );
+      },
+    );
+  }
+
+  Widget _buildBackendList() {
+    if (_backendAlerts.isEmpty) return const Text('No upcoming backend alerts');
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: _backendAlerts.length,
+      itemBuilder: (_, i) {
+        final a = _backendAlerts[i];
+        final due = a['due_date'] != null ? DateTime.parse(a['due_date']).toLocal() : null;
+        return ListTile(
+          title: Text(a['title']),
+          subtitle: Text('Due: ${due?.toString() ?? "—"} Recurrence: ${a['recurrence'] ?? "none"}'),
+          trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+            IconButton(icon: const Icon(Icons.check), onPressed: () => _ackBackendAlert(a['id'])),
+            IconButton(icon: const Icon(Icons.cancel), onPressed: () => _cancelPending(a['id'])),
+          ]),
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Scheduled Notifications'),
+        actions: [IconButton(icon: const Icon(Icons.refresh), onPressed: _load)],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(12),
+        child: _loading ? const Center(child: CircularProgressIndicator()) : SingleChildScrollView(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('Local scheduled notifications', style: TextStyle(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 8),
+          _buildPendingList(),
+          const SizedBox(height: 16),
+          const Text('upcoming alerts', style: TextStyle(fontWeight: FontWeight.bold)),
+          const SizedBox(height: 8),
+          _buildBackendList(),
+        ])),
+      ),
+    );
+  }
+}
