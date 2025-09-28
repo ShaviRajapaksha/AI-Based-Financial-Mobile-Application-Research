@@ -13,8 +13,8 @@ decisions and achieve their financial goals effectively.
 | IT21138218 | E. M. S. P. Ekanayake  | Debt Management      |
 | IT21049736 | K. H. Nimesha          | Saving Management    |
 
-<p align="center" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
 
+<p align="center" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
   <img src="https://github.com/user-attachments/assets/c6b8eab4-11f8-48f2-809d-d98ed5dcb385" alt="Screenshot_2025 09 10_13 24 13 425" style="width:24%; height:auto;">
   <img src="https://github.com/user-attachments/assets/611df907-bb2c-4920-a656-60d56a20cdf6" alt="Screenshot_2025 09 10_13 24 22 660" style="width:24%; height:auto;">
   <img src="https://github.com/user-attachments/assets/549234f9-95e0-45ec-a8f9-565d956debfe" alt="Screenshot_2025 09 10_13 24 32 358" style="width:24%; height:auto;">
@@ -59,7 +59,6 @@ decisions and achieve their financial goals effectively.
   <img src="https://github.com/user-attachments/assets/ad45e9fd-a431-44f5-abf0-99e1b0244f1b" alt="Screenshot_2025 09 10_13 22 58 192" style="width:24%; height:auto;">
   <img src="https://github.com/user-attachments/assets/d8b52ac8-b3f1-491e-8ff6-61fa71c26a93" alt="Screenshot_2025 09 10_13 23 20 158" style="width:24%; height:auto;">
   <img src="https://github.com/user-attachments/assets/90daa6c9-38da-400a-825b-502dfb520c70" alt="Screenshot_2025 09 10_13 22 30 143" style="width:24%; height:auto;">
-
 </p>
 
 
