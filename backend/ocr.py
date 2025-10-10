@@ -6,6 +6,7 @@ from typing import Tuple
 
 # set tesseract cmd path on Windows if needed
 # pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+# need to install tesseract ocr globally
 
 def preprocess(image_path: str) -> np.ndarray:
     img = cv2.imdecode(np.fromfile(image_path, dtype=np.uint8), cv2.IMREAD_COLOR)
