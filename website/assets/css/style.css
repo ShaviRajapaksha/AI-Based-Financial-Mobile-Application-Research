@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #3291e6;
+  color: #178178;
   text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #178178;
-  border-top-color: #d1e6f9;
+  border-top-color: #178178;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -90,10 +90,9 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #178178;
+  background: #0c8450;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
   transition: all 0.4s;
 }
 
@@ -104,7 +103,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #298ce5;
+  background: #06452a;
   color: #fff;
 }
 
@@ -121,7 +120,7 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #fff;
+  background: #0c8450;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -134,16 +133,16 @@ h6 {
 
 #topbar .contact-info a {
   line-height: 1;
-  color: #444444;
+  color: #ffffff;
   transition: 0.3s;
 }
 
 #topbar .contact-info a:hover {
-  color: #1977cc;
+  color: #ffffff;
 }
 
 #topbar .contact-info i {
-  color: #178178;
+  color: #ffffff;
   padding-right: 4px;
   margin-left: 15px;
   line-height: 0;
@@ -154,7 +153,7 @@ h6 {
 }
 
 #topbar .social-links a {
-  color: #437099;
+  color: #ffffff;
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
@@ -162,7 +161,7 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #178178;
+  color: #ffffff;
 }
 
 #topbar .social-links a:first-child {
@@ -178,7 +177,7 @@ h6 {
   z-index: 997;
   padding: 15px 0;
   top: 40px;
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+  box-shadow: 0px 2px 15px rgba(189, 190, 191, 0.1);
 }
 
 #header.header-scrolled {
@@ -239,7 +238,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  color: #2c4964;
+  color: #000000;
   white-space: nowrap;
   transition: 0.3s;
   border-bottom: 2px solid #fff;
@@ -285,7 +284,7 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #082744;
+  color: #3a3b3b;
   border: none;
 }
 
@@ -332,7 +331,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #2c4964;
+  color: #0c8450;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -361,7 +360,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(28, 47, 65, 0.9);
+  background: rgba(58, 58, 58, 0.9);
   transition: 0.3s;
   z-index: 999;
 }
@@ -465,7 +464,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #2c4964;
+  color: #0c8450;
 }
 
 .section-title h2::before {
@@ -485,7 +484,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #178178;
+  background: #0c8450;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -566,9 +565,7 @@ section {
 .why-us .content {
   padding: 15px;
   background: #0c8450;
-  border-radius: 4px;
   color: #fff;
-  border-radius: 4%;
 }
 
 .why-us .content h3 {
@@ -586,7 +583,6 @@ section {
   background: rgba(255, 255, 255, 0.2);
   padding: 6px 30px 8px 30px;
   color: #fff;
-  border-radius: 50px;
   transition: all ease-in-out 0.4s;
 }
 
@@ -601,7 +597,6 @@ section {
 
 .why-us .icon-boxes .icon-box {
   text-align: center;
-  border-radius: 10px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
@@ -634,11 +629,15 @@ section {
   margin-bottom: 15px;
 }
 
+.about p1 {
+  padding: 20px;
+}
 .about .icon-boxes h3 {
   font-size: 28px;
   font-weight: 700;
   color: #06a970;
   margin-bottom: 15px;
+  padding:20px;
 }
 
 .about .icon-box {
@@ -802,72 +801,75 @@ section {
 /*--------------------------------------------------------------
 # Milestones
 --------------------------------------------------------------*/
-.milestones .icon-box {
+.milestones {
+  padding: 20px;
   text-align: center;
-  padding: 40px 20px;
-  transition: all ease-in-out 0.3s;
+}
+
+.milestones .icon-box {
   background: #06a9705a;
+  padding: 40px 20px;
+  transition: all 0.3s ease-in-out;
+  min-height: 250px;
 }
 
 .milestones .icon-box .icon {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 64px;
   height: 64px;
-  background: #06a970;
-  border-radius: 50px;
+  background: #0c8450;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.3s;
-  color: #002F66;
+  transition: all 0.3s ease-in-out;
 }
 
 .milestones .icon-box .icon i {
   color: #fff;
   font-size: 28px;
-  font-weight: bold;
 }
 
 .milestones .icon-box h4 {
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 24px;
-
+  font-size: 22px;
 }
 
 .milestones .icon-box h4 a {
-  transition: ease-in-out 0.3s;
   color: #2c4964;
+  transition: all 0.3s ease-in-out;
 }
 
 .milestones .icon-box p {
-  line-height: 24px;
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 0;
-
+  line-height: 22px;
 }
 
 .milestones .icon-box:hover {
   background: #c5dcf3;
-  border-color: #178178;
+  transform: translateY(-5px);
 }
 
 .milestones .icon-box:hover h4 a {
-  color: #178178;
+  color: #0c8450;
 }
 
-.milestones .icon-box:hover .icon {
-  color: #fff;
+/*  Responsive Fixes */
+@media (max-width: 767px) {
+  .milestones .icon-box {
+    margin-bottom: 20px;
+  }
 }
-
 
 
 /*--------------------------------------------------------------
 # Scope
 --------------------------------------------------------------*/
 .scope {
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -887,12 +889,12 @@ section {
 }
 
 .scope .nav-link:hover {
-  color: #074919;
+  color: #0c8450;
 }
 
 .scope .nav-link.active {
-  color: #074919;
-  border-color: #074919;
+  color: #0c8450;
+  border-color: #0c8450;
 }
 
 .scope .tab-pane.active {
@@ -904,7 +906,7 @@ section {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #2c4964;
+  color: #0c8450;
 }
 
 .scope .details p {
@@ -923,7 +925,7 @@ section {
 
   .scope .nav-link.active {
     color: #fff;
-    background: #178178;
+    background: #0c8450;
   }
 }
 
@@ -932,6 +934,7 @@ section {
 # Documentation
 --------------------------------------------------------------*/
 .documents {
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -1174,7 +1177,7 @@ section {
 
 .ourteam .member {
   position: relative;
-  box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
+  box-shadow: 0px 2px 15px rgba(95, 95, 95, 0.08);
   padding: 30px;
   border-radius: 10px;
 }
@@ -1184,11 +1187,17 @@ section {
   width: 180px;
   height: 180px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .ourteam .member .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 50%;
   transition: ease-in-out 0.3s;
 }
+
 
 .ourteam .member:hover img {
   transform: scale(1.1);
@@ -1202,7 +1211,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
-  color: #2c4964;
+  color: #06a970;
 }
 
 .ourteam .member span {
@@ -1215,7 +1224,7 @@ section {
 
 .ourteam .member p1 {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   position: relative;
   font-weight: 500;
 }
@@ -1226,7 +1235,7 @@ section {
   display: block;
   width: 50px;
   height: 1px;
-  background: #b2c8dd;
+  background: #06a970;
   bottom: 0;
   left: 0;
 }
@@ -1252,7 +1261,7 @@ section {
   border-radius: 50px;
   width: 32px;
   height: 32px;
-  background: #a0bcd5;
+  background: #06a970;
 }
 
 .ourteam .member .social a i {
@@ -1262,7 +1271,7 @@ section {
 }
 
 .ourteam .member .social a:hover {
-  background: #1977cc;
+  background: #034a31;
 }
 
 .ourteam .member .social a+a {
@@ -1271,16 +1280,20 @@ section {
 
 @media (max-width: 992px) {
   .ourteam .member .pic {
-    overflow: hidden;
     width: 150px;
-    height: 100px;
-    border-radius: 50%;
+    height: 150px;
   }
+}
 
-  .documents .nav-link.active {
-    color: #ffffff;
-    background: #178178;
+@media (max-width: 576px) {
+  .ourteam .member .pic {
+    width: 80px;
+    height: 80px;
   }
+}
+#hero a{
+  border-radius: 0px;
+  color: #06a970;
 }
 
 /*--------------------------------------------------------------
@@ -1376,11 +1389,11 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #178178;
+  color: #ffffff;
   float: left;
   width: 44px;
   height: 44px;
-  background: #d6e9fa;
+  background: #06a970;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1393,14 +1406,14 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #2c4964;
+  color: #06a970;
 }
 
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #4b7dab;
+  color: #2f2f2f;
 }
 
 .contact .info .email,
@@ -1440,7 +1453,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #06a970;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1460,7 +1473,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid #06a970;
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -1482,7 +1495,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #178178;
+  background: #06a970;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1526,7 +1539,7 @@ section {
 #footer .footer-top {
   padding: 60px 0 30px 0;
   background: #fff;
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+  box-shadow: 0px 2px 15px rgba(196, 197, 197, 0.1);
 }
 
 #footer .footer-top .footer-contact {
@@ -1569,7 +1582,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #1c84e3;
+  color: #06a970;
   font-size: 18px;
   line-height: 1;
 }
@@ -1593,7 +1606,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #1977cc;
+  color: #06a970;
 }
 
 #footer .footer-newsletter {
@@ -1633,14 +1646,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1977cc;
+  background: #06a970;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #1c84e3;
+  background: #06a970;
 }
 
 #footer .credits {
@@ -1652,7 +1665,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #1977cc;
+  background: #06a970;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1665,7 +1678,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #1c84e3;
+  background: #035d3d;
   color: #fff;
   text-decoration: none;
 }
