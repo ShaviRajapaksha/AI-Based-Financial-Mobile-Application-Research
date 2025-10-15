@@ -6,7 +6,7 @@ savings management. By providing predictive analytics, and personalized
 recommendations, this system empowers users to make smarter financial
 decisions and achieve their financial goals effectively.
 
-Production Website Link : https://myfinmateai.netlify.app/
+Research Project Website Link : https://myfinmateai.netlify.app/
 
 | Student ID | Name                  | Components           |
 |------------|-----------------------|----------------------|
