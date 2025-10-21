@@ -51,8 +51,8 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #178178;
-  border-top-color: #178178;
+  border: 6px solid #0c845068;
+  border-top-color: #0c8450;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -818,7 +818,6 @@ section {
   width: 64px;
   height: 64px;
   background: #0c8450;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1179,14 +1178,12 @@ section {
   position: relative;
   box-shadow: 0px 2px 15px rgba(95, 95, 95, 0.08);
   padding: 30px;
-  border-radius: 10px;
 }
 
 .ourteam .member .pic {
   overflow: hidden;
   width: 180px;
   height: 180px;
-  border-radius: 50%;
   flex-shrink: 0;
 }
 
@@ -1194,7 +1191,6 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover; 
-  border-radius: 50%;
   transition: ease-in-out 0.3s;
 }
 
@@ -1216,7 +1212,7 @@ section {
 
 .ourteam .member span {
   display: block;
-  font-size: 15px;
+  font-size: 18px;
   padding-bottom: 10px;
   position: relative;
   font-weight: 500;
@@ -1242,7 +1238,7 @@ section {
 
 .ourteam .member p {
   margin: 10px 0 0 0;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 
@@ -1258,7 +1254,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
   width: 32px;
   height: 32px;
   background: #06a970;
@@ -1397,7 +1392,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1527,13 +1521,54 @@ section {
   }
 }
 
+/* Map Loader Styles */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.map-loader {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.5s ease;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid #06a970;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.map-loader p {
+  margin-top: 12px;
+  color: #06a970;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   color: #444444;
   font-size: 14px;
-  background: #f1f7fd;
+  background: #0c8450;
 }
 
 #footer .footer-top {
@@ -1656,10 +1691,10 @@ section {
   background: #06a970;
 }
 
-#footer .credits {
+#footer .copyright {
   padding-top: 5px;
   font-size: 13px;
-  color: #444444;
+  color: #ffffff;
 }
 
 #footer .social-links a {
@@ -1670,7 +1705,6 @@ section {
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
-  border-radius: 50%;
   text-align: center;
   width: 36px;
   height: 36px;
