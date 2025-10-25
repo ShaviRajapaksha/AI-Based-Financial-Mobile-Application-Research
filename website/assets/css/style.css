@@ -256,8 +256,8 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #178178;
-  border-color: #178178;
+  color: #0c8450;
+  border-color: #0c8450;
 }
 
 .navbar .dropdown ul {
@@ -916,6 +916,12 @@ section {
   margin-bottom: 0;
 }
 
+.scope .nav-link.active {
+    padding-left: 20px;
+    color: #fff;
+    background: #0c8450;
+  }
+
 @media (max-width: 992px) {
   .scope .nav-link {
     border: 0;
@@ -927,6 +933,40 @@ section {
     background: #0c8450;
   }
 }
+/* Banner Section */
+#banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner Image — shows full image without cropping */
+#banner .banner-img {
+  width: 100%;
+  height: auto;          
+  object-fit: contain;   
+  display: block;
+  margin-top: 60px;
+}
+
+#banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start; 
+  justify-content: center;
+  padding-top: 20px; 
+}
+
+/* Banner Heading */
+#banner .section-title h2 {
+  margin-bottom:40px
+}
+
+
 
 
 /*--------------------------------------------------------------
@@ -991,7 +1031,7 @@ section {
 
   .documents .nav-link.active {
     color: #ffffff;
-    background: #178178;
+    background: #06a970;
   }
 }
 
